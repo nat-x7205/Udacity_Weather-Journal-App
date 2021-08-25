@@ -19,6 +19,7 @@ document.getElementById('generate').addEventListener('click', processData);
 
 /* Function called by event listener */
 function processData(event) {
+  event.preventDefault(); // to avoid 'undefined' values when clicked first time
   // Inputs values
   const zipEntry = document.getElementById('zip').value;
   // const cityEntry = document.getElementById('zip').value;
@@ -50,10 +51,7 @@ const getWeatherInfo = async (url) => {
       const weatherData = await res.json();
       console.log(weatherData.main.temp, Math.round(weatherData.main.temp));
       return Math.round(weatherData.main.temp);
-      // 1. We can do something with our returned data here-- like chain promises!
-
-      // 2. 
-      // postData('/addAnimal', data)
+      
     }  catch(error) {
       // appropriately handle the error
       console.log("error", error);
@@ -70,7 +68,7 @@ const postData = async ( url = '', data = {}) => {
   headers: {
       'Content-Type': 'application/json',
   },
-  body: JSON.stringify(data), // body data type must match "Content-Type" header        
+  body: JSON.stringify(data) // body data type must match "Content-Type" header        
   });
 
   try {
@@ -89,6 +87,8 @@ const retrieveData = async (url = '') => {
   
   try {
     const allData = await response.json();
+    console.log('From app.js retrieveData function: ' + allData);
+    return allData;
   } catch(error) {
     // appropriately handle the error
     console.log('Error', error);
@@ -97,15 +97,15 @@ const retrieveData = async (url = '') => {
 
 /* Function Update UI */
 const updateUI = async () => {
-  const res = await fetch('/all');
+  const response = await fetch('/all');
 
   try {
     const allData = await response.json();
     console.log(allData);
 
-    document.getElementById('date').innerHTML = allData[0].date;
-    document.getElementById('temp').innerHTML = allData[0].temperature;
-    document.getElementById('content').innerHTML = allData[0].feelings;
+    document.getElementById('date').innerHTML = allData.date;
+    document.getElementById('temp').innerHTML = allData.temperature;
+    document.getElementById('content').innerHTML = allData.feelings;
   } catch(error) {
     // appropriately handle the error
     console.log('Error', error);

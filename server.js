@@ -40,24 +40,35 @@ function sendData(req, res) {
 };
 
 // Post Route
-app.post('/add', postReceived);
+// app.post('/add', postReceived);
 
-function postReceived(req, res) {
-  res.send('POST received');
-};
+// function postReceived(req, res) {
+//   res.send('POST received');
+// };
 
-const data = [];
+// const data = [];
 app.post('/addData', addData);
 
 function addData(req, res) {
-  console.log(req.body);
+  console.log('From addData function: ' + req.body);
   const newEntry = {
-    date: req.body.date,
-    temperature: req.body.temp,
-    feelings: req.body.feelings
-  }
+        date: req.body.date,
+        temperature: req.body.temperature,
+        feelings: req.body.feelings
+      }
+  projectData = newEntry;
+  res.send(projectData);
+}
+// function addData(req, res) {
+//   console.log(req.body);
+//   const newEntry = {
+//     date: req.body.date,
+//     temperature: req.body.temp,
+//     feelings: req.body.feelings
+//   }
 
-  // data.push(req.body);
-  data.push(newEntry);
-  console.log(data);
-};
+//   // data.push(req.body);
+//   data.push(newEntry);
+//   console.log(data);
+//   res.send(newEntry);
+// };
