@@ -103,11 +103,17 @@ const updateUI = async () => {
     const allData = await response.json();
     console.log(allData);
 
-    document.getElementById('date').innerHTML = allData.date;
-    document.getElementById('temp').innerHTML = allData.temperature;
-    document.getElementById('content').innerHTML = allData.feelings;
+    document.getElementById('date').innerHTML = `Today is the <strong>${allData.date}</strong>.`;
+    document.getElementById('temp').innerHTML = `In <strong>Sydney, AU</strong>, it is <strong>${allData.temperature}&deg;C</strong>`;
+    document.getElementById('content').innerHTML = `and you feel <strong>${allData.feelings}</strong>.`;
   } catch(error) {
     // appropriately handle the error
     console.log('Error', error);
   }
 }
+
+/*
+<div id="date">Today is the <strong>27 August 2021</strong>.</div> 
+<div id="temp">In <strong>Sydney, AU</strong>, the temperature is <strong>17&deg;C</strong></div>
+<div id="content">and you feel <strong>ok</strong>.</div>
+*/

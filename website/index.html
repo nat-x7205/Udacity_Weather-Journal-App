@@ -8,32 +8,49 @@
   <meta name="description" content="This project is an asynchronous web app that uses Web API and user data to dynamically update the UI for a Weather-Journal App.">
   <meta name="author" content="Natalia Petrenko">
   <title>Weather Journal</title>
-  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div id="app">
-    <h1 class="holder headline">
-      Weather Journal App
-    </h1>
-    <div class="holder zip">
-      <label for="zip">Enter zip code here</label>
-      <input type="text" id="zip" placeholder="Enter zip code here">
+    <div id="user-entry-container">
+      <h1 class="holder headline">
+        Weather Journal App
+      </h1>
+      <div class="holder zip">
+        <label for="zip">Enter zip code</label>
+        <input type="text" id="zip" placeholder="Enter zip code here, e.g. 2000">
+      </div>
+      <div class="holder country-code">
+        <label for="country-code">Enter country code</label>
+        <p>Please, refer to &nbsp;<a href="https://www.iso.org/obp/ui/#search">ISO 3166</a>&nbsp; for the country codes.</p>
+        <input type="text" id="country-code" placeholder="Enter two letter country code here, e.g. AU">
+      </div>
+      <div class="holder feel">
+        <label for="feelings">How are you feeling today?</label>
+        <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="3" cols="50"></textarea>
+        <button id="generate" type="submit">Generate</button>
+      </div>
     </div>
-    <div class="holder feel">
-      <label for="feelings">How are you feeling today?</label>
-      <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="9" cols="50"></textarea>
-      <button id="generate" type="submit">Generate</button>
-    </div>
-    <div class="holder entry">
+    <div class="entry-results">
       <div class="title">Most Recent Entry</div>
-      <div id="entryHolder"></div>
-      <div id="date"></div> 
-      <div id="temp"></div>
-      <div id="content"></div>
+      <div id="entryHolder">
+        <div id="date"></div> 
+        <div id="temp"></div>
+        <div id="content"></div>
+      </div>
     </div>
   </div>
+
+  <footer id="photo-reference">
+    <div>
+      The beautiful background photo by <a href="https://unsplash.com/@fabriziochiagano?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fabrizio Chiagano</a> on <a href="https://unsplash.com/s/photos/zen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </div>
+    <div>
+      &copy Coded by Natalia Petrenko, 2021
+    </div>
+  </footer>  
   
   <script src="app.js" type="text/javascript"></script>
 
