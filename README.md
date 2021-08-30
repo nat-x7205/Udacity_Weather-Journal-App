@@ -24,7 +24,7 @@ This project is a part of the **Front End Web Developer** nanodegree program. Th
 6. Happy playing!
 
 ## License
-The **Weather Journal App** is free for the personal use.
+The **Weather Journal App** is free for personal use.
 
 ## Copyright
 Coded by Natalia Petrenko, 2021.
