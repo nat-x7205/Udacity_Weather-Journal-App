@@ -53,6 +53,8 @@ function addData(req, res) {
   console.log('From addData function: ' + req.body);
   const newEntry = {
         date: req.body.date,
+        city: req.body.city,
+        countryCode: req.body.countryCode,
         temperature: req.body.temperature,
         feelings: req.body.feelings
       }

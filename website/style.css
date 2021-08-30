@@ -35,6 +35,10 @@ body {
   margin: 50px auto;
   max-width: 720px;
 }
+
+.display-none {
+  display: none;
+}
 /* -- End of BASE STYLES -- */
 
 
