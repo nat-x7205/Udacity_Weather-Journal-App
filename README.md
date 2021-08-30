@@ -19,7 +19,7 @@ This project is a part of the **Front End Web Developer** nanodegree program. Th
 1. Download files or clone [the project repository](https://github.com/nat-x7205/Udacity_Weather-Journal-App).
 2. Check if you `node.js` is installed on your computer. If not, download and install LTS node version from the [node.org](https://nodejs.org/en/) website.
 3. Open the Terminal and navigate to the **Udacity_Weather-Journal-App** directory.
-4. In Terminal run the command `node server.js`.
+4. In Terminal run the command `node server.js` to start server.
 5. Open the webpage in browser tab using the address `http://localhost:3000/`.
 6. Happy playing!
 
