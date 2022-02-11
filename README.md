@@ -2,7 +2,7 @@
 
 ## Overview
 This project is a part of the **Front End Web Developer** nanodegree program. <br /><br />
-![The Weather-Journal-App screenshot](../images/weather-journal-app.jpg?raw=true "The Weather-Journal-App screenshot")<br /><br />
+![The Weather-Journal-App screenshot](../images/weather-jourmal-app_screenshot.jpg?raw=true "The Weather-Journal-App screenshot")<br /><br />
 
 The project is an asynchronous web app that uses Web API and user data to dynamically update the UI for a Weather Journal App.
 
