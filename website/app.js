@@ -41,6 +41,7 @@ function processData(event) {
   .then(() => {
     updateUI('.entry-results');
   })
+  
   // Appropriately handle the error (key values are 'zipEntry' and 'countryCodeEntry')
   .catch((error) => {
     alert('Zip or country code is invalid.');
