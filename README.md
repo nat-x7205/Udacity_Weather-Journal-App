@@ -4,7 +4,10 @@
 This project is a part of the **Front End Web Developer** nanodegree program. <br /><br />
 ![The Weather-Journal-App screenshot](website/images/weather-journal-app_screenshot.jpg?raw=true "The Weather-Journal-App screenshot")<br /><br />
 
-The project is an asynchronous web app that uses Web API and user data to dynamically update the UI for a Weather Journal App.
+The project is an asynchronous web app that uses Web API and user data to dynamically update the UI for the Weather Journal App.
+
+## Demo
+The [demo version](http://thequickwebsite.com:3000/) of the Weather Journal App project.
 
 ## References
  - The weather data is obtained from [Open Weather website](https://openweathermap.org/) who provides historical, current and forecasted weather data via light-speed APIs for each point on the globe.
